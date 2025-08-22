@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - WPC Call Center</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <h2>W<span>PC</span></h2>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À Propos</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="recruitment.html" class="nav-link">Recrutement</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu-container">
+        <div class="mobile-menu-header">
+            <h3>Menu WPC</h3>
+            <button class="close-menu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> À Propos</a></li>
+            <li><a href="services.html" class="mobile-nav-link"><i class="fas fa-concierge-bell"></i> Services</a></li>
+            <li><a href="contact.html" class="mobile-nav-link active"><i class="fas fa-phone-alt"></i> Contact</a></li>
+            <li><a href="recruitment.html" class="mobile-nav-link"><i class="fas fa-user-tie"></i> Recrutement</a></li>
+        </ul>
+    </div>
+
+    <div class="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Contactez-nous</h1>
+                <p>Nous sommes à votre écoute pour répondre à toutes vos questions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Coordonnées</h2>
+                <p>Plusieurs façons de nous contacter</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Téléphone</h3>
+                    <p>+1 510 281 7365</p>
+                    <p>Lun-Ven: 8h-18h | Sam: 9h-13h</p>
+                    <a href="tel:+15102817365" class="contact-cta">Appeler maintenant</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>WPC.center@gmail.com</p>
+                    <p>Réponse sous 24 heures</p>
+                    <a href="mailto:WPC.center@gmail.com" class="contact-cta">Envoyer un email</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>+1 510 281 7365</p>
+                    <p>Support instantané</p>
+                    <a href="https://wa.me/15102817365" target="_blank" class="contact-cta">Nous écrire</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Adresse</h3>
+                    <p>123 Rue des Affaires</p>
+                    <p>Port-au-Prince, Haïti</p>
+                    <a href="https://goo.gl/maps/example" target="_blank" class="contact-cta">Voir sur la carte</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-content">
+                    <h2>Envoyez-nous un message</h2>
+                    <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+                    
+                    <!-- Message de statut -->
+                    <div id="form-status" class="form-status" style="display: none;">
+                        <div class="status-content">
+                            <i class="status-icon"></i>
+                            <p class="status-message"></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulaire avec Formspree -->
+                    <form id="contactForm" action="https://formspree.io/f/mzzvnjyr" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Adresse email *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Numéro de téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service concerné *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Sélectionnez un service</option>
+                                <option value="customer-service">Service Client</option>
+                                <option value="telemarketing">Télémarketing</option>
+                                <option value="market-research">Études de Marché</option>
+                                <option value="recovery">Recouvrement</option>
+                                <option value="technical-support">Support Technique</option>
+                                <option value="emergency">Urgence & Assistance</option>
+                                <option value="other">Autre</option>
+                            </select>
+                            <span class="error-message" id="serviceError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">J'accepte que mes données soient utilisées pour me recontacter *</label>
+                            <span class="error-message" id="consentError"></span>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Envoyer le message</span>
+                            <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i> Envoi en cours...</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="form-info">
+                    <h3>Informations de contact</h3>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+1 510 281 7365</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>WPC.center@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+1 510 281 7365</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>123 Rue des Affaires</p>
+                            <p>Port-au-Prince, Haïti</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Heures d'ouverture</h4>
+                            <p>Lun-Ven: 8h-18h</p>
+                            <p>Samedi: 9h-13h</p>
+                            <p>Dimanche: Fermé</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Suivez-nous</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions Fréquentes</h2>
+                <p>Trouvez des réponses aux questions les plus courantes</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quels sont vos horaires d'ouverture?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nos services sont disponibles du lundi au vendredi de 8h à 18h, et le samedi de 9h à 13h. Notre service client d'urgence est disponible 24h/24 et 7j/7.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Comment puis-je obtenir un devis?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vous pouvez demander un devis gratuit en remplissant notre formulaire de contact, en nous appelant directement ou en nous envoyant un email. Nous vous répondrons sous 24 heures avec une estimation personnalisée.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Proposez-vous des services en plusieurs langues?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous proposons des services en français, anglais, espagnol et créole. Nos agents sont formés pour communiquer efficacement dans ces langues.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quel est le délai de réponse pour les demandes par email?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous nous engageons à répondre à toutes les demandes par email dans un délai maximum de 24 heures ouvrées. Pour les urgences, nous recommandons de nous appeler directement.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Proposez-vous des solutions sur mesure?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolument. Chaque client est unique et nous adaptons nos services à vos besoins spécifiques. Lors de notre premier contact, nous prendrons le temps de comprendre vos exigences pour vous proposer une solution personnalisée.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Notre Localisation</h2>
+                <p>Venez nous rencontrer dans nos bureaux</p>
+            </div>
+            
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Carte interactive</h3>
+                    <p>Notre siège social est situé au 123 Rue des Affaires, Port-au-Prince, Haïti</p>
+                    <a href="https://goo.gl/maps/example" target="_blank" class="map-cta">Voir sur Google Maps</a>
+                </div>
+                
+                <div class="map-info">
+                    <h3>Accès et stationnement</h3>
+                    <p>Notre bureau est facilement accessible en transport en commun et dispose d'un parking gratuit pour nos visiteurs.</p>
+                    
+                    <div class="transport-info">
+                        <div class="transport-item">
+                            <i class="fas fa-bus"></i>
+                            <span>Lignes de bus: 12, 24, 36</span>
+                        </div>
+                        <div class="transport-item">
+                            <i class="fas fa-subway"></i>
+                            <span>Métro: Station Commerce</span>
+                        </div>
+                        <div class="transport-item">
+                            <i class="fas fa-parking"></i>
+                            <span>Parking gratuit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>WPC</h3>
+                    <p>Solutions de centre d'appels professionnelles pour entreprises de toutes tailles. Excellence, innovation et satisfaction client depuis 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-arrow-right"></i> Accueil</a></li>
+                        <li><a href="about.html"><i class="fas fa-arrow-right"></i> À Propos</a></li>
+                        <li><a href="services.html"><i class="fas fa-arrow-right"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="fas fa-arrow-right"></i> Contact</a></li>
+                        <li><a href="recruitment.html"><i class="fas fa-arrow-right"></i> Recrutement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> Service Client</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> Télémarketing</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> Études de Marché</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> Recouvrement</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> Support Technique</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> WPC.center@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +1 510 281 7365</p>
+                    <p><i class="fab fa-whatsapp"></i> +1 510 281 7365</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue des Affaires, Port-au-Prince, Haïti</p>
+                    <p><i class="fas fa-clock"></i> Lun-Ven: 8h-18h | Sam: 9h-13h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 WPC. Tous droits réservés. | Site codé par <a href="https://wa.me/15102817365" target="_blank">True-Manno</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
